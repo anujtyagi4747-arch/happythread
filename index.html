@@ -1,0 +1,1194 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap');
+
+:root{
+  --cream:#f8f5ed;
+  --ivory:#fffdf8;
+  --sage:#7d866f;
+  --dark:#252822;
+  --gold:#b49a68;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--ivory);
+  color:var(--dark);
+  font-family:'DM Sans',sans-serif;
+  overflow-x:hidden;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.site-header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:76px;
+  z-index:1000;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 6%;
+  background:rgba(255,253,248,.88);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(37,40,34,.08);
+}
+
+.logo{
+  font-family:'Playfair Display',serif;
+  font-size:25px;
+  font-weight:600;
+  letter-spacing:-.5px;
+}
+
+.logo span{
+  color:var(--sage);
+}
+
+.nav-links{
+  display:flex;
+  gap:32px;
+  font-size:14px;
+}
+
+.nav-links a{
+  position:relative;
+}
+
+.nav-links a:after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-7px;
+  width:0;
+  height:1px;
+  background:var(--dark);
+  transition:.3s;
+}
+
+.nav-links a:hover:after{
+  width:100%;
+}
+
+.header-actions{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.icon-btn{
+  width:40px;
+  height:40px;
+  border:1px solid rgba(37,40,34,.15);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:#fff;
+  font-size:17px;
+}
+
+.menu-btn{
+  display:none;
+}
+
+.hero{
+  position:relative;
+  min-height:100vh;
+  padding-top:76px;
+  overflow:hidden;
+  background:var(--cream);
+}
+
+.hero-video{
+  position:absolute;
+  inset:76px 0 0 0;
+  width:100%;
+  height:calc(100% - 76px);
+  object-fit:cover;
+  object-position:center;
+  filter:saturate(.78);
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:76px 0 0 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(248,245,237,.88) 0%,
+      rgba(248,245,237,.48) 42%,
+      rgba(248,245,237,.08) 100%
+    );
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  min-height:calc(100vh - 76px);
+  display:flex;
+  align-items:center;
+  padding:70px 8%;
+}
+
+.hero-inner{
+  max-width:570px;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:2.5px;
+  margin-bottom:20px;
+  color:#5d6555;
+}
+
+.eyebrow:before{
+  content:"";
+  width:30px;
+  height:1px;
+  background:var(--sage);
+}
+
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(48px,7vw,86px);
+  line-height:.98;
+  font-weight:500;
+  letter-spacing:-2px;
+  margin-bottom:25px;
+}
+
+.hero h1 em{
+  color:var(--sage);
+  font-style:italic;
+}
+
+.hero p{
+  max-width:450px;
+  font-size:16px;
+  line-height:1.8;
+  color:#55594f;
+  margin-bottom:32px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.primary-btn{
+  padding:15px 27px;
+  border-radius:30px;
+  background:var(--dark);
+  color:#fff;
+  font-size:14px;
+  transition:.3s;
+}
+
+.primary-btn:hover{
+  transform:translateY(-2px);
+  background:var(--sage);
+}
+
+.secondary-btn{
+  padding:14px 25px;
+  border-radius:30px;
+  border:1px solid rgba(37,40,34,.25);
+  background:rgba(255,255,255,.72);
+  font-size:14px;
+  transition:.3s;
+}
+
+.secondary-btn:hover{
+  background:#fff;
+  transform:translateY(-2px);
+}
+
+.hero-note{
+  margin-top:32px;
+  display:flex;
+  gap:18px;
+  font-size:12px;
+  color:#686c63;
+}
+
+.hero-note span{
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.scroll-indicator{
+  position:absolute;
+  z-index:3;
+  bottom:25px;
+  right:7%;
+  font-size:11px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  writing-mode:vertical-rl;
+  color:#55594f;
+}
+
+@media(max-width:768px){
+
+  .site-header{
+    height:66px;
+    padding:0 5%;
+  }
+
+  .logo{
+    font-size:21px;
+  }
+
+  .nav-links{
+    display:none;
+  }
+
+  .header-actions .icon-btn:first-child{
+    display:none;
+  }
+
+  .menu-btn{
+    display:grid;
+  }
+
+  .hero{
+    min-height:100svh;
+    padding-top:66px;
+  }
+
+  .hero-video{
+    inset:66px 0 0 0;
+    width:100%;
+    height:calc(100% - 66px);
+    object-position:center;
+  }
+
+  .hero-overlay{
+    inset:66px 0 0 0;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(248,245,237,.18) 5%,
+        rgba(248,245,237,.42) 42%,
+        rgba(248,245,237,.94) 83%
+      );
+  }
+
+  .hero-content{
+    min-height:calc(100svh - 66px);
+    align-items:flex-end;
+    padding:40px 6% 72px;
+  }
+
+  .hero-inner{
+    max-width:100%;
+  }
+
+  .eyebrow{
+    font-size:10px;
+    letter-spacing:2px;
+    margin-bottom:14px;
+  }
+
+  .hero h1{
+    font-size:50px;
+    line-height:1;
+    letter-spacing:-1.5px;
+    margin-bottom:18px;
+  }
+
+  .hero p{
+    font-size:14px;
+    line-height:1.65;
+    margin-bottom:23px;
+  }
+
+  .hero-buttons{
+    width:100%;
+  }
+
+  .primary-btn,
+  .secondary-btn{
+    flex:1;
+    text-align:center;
+    padding:14px 15px;
+  }
+
+  .hero-note{
+    margin-top:22px;
+    gap:12px;
+    flex-wrap:wrap;
+    font-size:10px;
+  }
+
+  .scroll-indicator{
+    display:none;
+  }
+}
+</style>
+
+<header class="site-header">
+
+  <a href="#" class="logo">
+    The Happy <span>Thread</span>
+  </a>
+
+  <nav class="nav-links">
+    <a href="#shop">Shop</a>
+    <a href="#about">Our Story</a>
+    <a href="#collections">Collections</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="header-actions">
+    <a href="#shop" class="icon-btn">⌕</a>
+    <a href="https://wa.me/919138020474" class="icon-btn">♡</a>
+    <button class="icon-btn menu-btn">☰</button>
+  </div>
+
+</header>
+
+<section class="hero">
+
+  <video
+    class="hero-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+    poster="https://images.pexels.com/videos/6787145/free-video-6787145.jpg"
+  >
+    <source
+      src="https://videos.pexels.com/video-files/6787145/6787145-hd_1080_1920_25fps.mp4"
+      type="video/mp4">
+  </video>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+
+    <div class="hero-inner">
+
+      <div class="eyebrow">
+        Handmade • Indian • Sustainable
+      </div>
+
+      <h1>
+        Little things,<br>
+        <em>more joy.</em>
+      </h1>
+
+      <p>
+        Thoughtfully handcrafted bags and little things
+        made with love, care and a touch of everyday elegance.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#shop" class="primary-btn">
+          Explore Collection →
+        </a>
+
+        <a
+          href="https://wa.me/919138020474?text=Hi%20The%20Happy%20Thread%2C%20I%20would%20like%20to%20know%20more%20about%20your%20products."
+          class="secondary-btn">
+          Order on WhatsApp
+        </a>
+
+      </div>
+
+      <div class="hero-note">
+        <span>✦ Handmade</span>
+        <span>✦ Premium Cotton</span>
+        <span>✦ Made in India</span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="scroll-indicator">
+    Scroll to explore
+  </div>
+
+</section>
+<style>
+.collection{
+  padding:100px 6%;
+  background:#fffdf8;
+}
+
+.section-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  margin-bottom:45px;
+}
+
+.section-label{
+  font-size:11px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  color:#7d866f;
+  margin-bottom:12px;
+}
+
+.section-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(38px,5vw,60px);
+  font-weight:500;
+  line-height:1;
+}
+
+.section-text{
+  max-width:330px;
+  font-size:14px;
+  line-height:1.7;
+  color:#70736b;
+}
+
+.category-row{
+  display:flex;
+  gap:10px;
+  overflow-x:auto;
+  padding-bottom:10px;
+  margin-bottom:35px;
+  scrollbar-width:none;
+}
+
+.category-row::-webkit-scrollbar{
+  display:none;
+}
+
+.category-btn{
+  flex:0 0 auto;
+  padding:10px 19px;
+  border:1px solid #dddcd4;
+  border-radius:30px;
+  background:#fff;
+  color:#55594f;
+  font-size:13px;
+  cursor:pointer;
+}
+
+.category-btn.active{
+  background:#292d27;
+  color:#fff;
+  border-color:#292d27;
+}
+
+.products-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.product-card{
+  position:relative;
+  background:#f5f1e8;
+  border-radius:4px;
+  overflow:hidden;
+  transition:.4s ease;
+}
+
+.product-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 15px 35px rgba(40,45,35,.09);
+}
+
+.product-img{
+  position:relative;
+  aspect-ratio:1/1.08;
+  overflow:hidden;
+  background:#eee9dd;
+}
+
+.product-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:.6s ease;
+}
+
+.product-card:hover .product-img img{
+  transform:scale(1.05);
+}
+
+.product-tag{
+  position:absolute;
+  top:13px;
+  left:13px;
+  z-index:2;
+  padding:7px 11px;
+  background:rgba(255,255,255,.9);
+  border-radius:20px;
+  font-size:10px;
+  letter-spacing:.5px;
+}
+
+.wish{
+  position:absolute;
+  top:12px;
+  right:12px;
+  width:36px;
+  height:36px;
+  border:0;
+  border-radius:50%;
+  background:rgba(255,255,255,.9);
+  font-size:17px;
+  cursor:pointer;
+  z-index:3;
+}
+
+.product-info{
+  padding:19px 17px 18px;
+  background:#fffdf8;
+}
+
+.product-name{
+  font-family:'Playfair Display',serif;
+  font-size:19px;
+  margin-bottom:7px;
+}
+
+.product-desc{
+  color:#85877f;
+  font-size:11px;
+  margin-bottom:14px;
+}
+
+.price-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+}
+
+.price{
+  font-size:15px;
+  font-weight:600;
+}
+
+.old-price{
+  font-size:12px;
+  color:#999;
+  text-decoration:line-through;
+  margin-left:5px;
+  font-weight:400;
+}
+
+.order-btn{
+  padding:9px 13px;
+  border-radius:20px;
+  background:#7d866f;
+  color:#fff;
+  font-size:11px;
+  transition:.3s;
+}
+
+.order-btn:hover{
+  background:#292d27;
+}
+
+.view-all{
+  margin-top:45px;
+  text-align:center;
+}
+
+.view-all a{
+  display:inline-block;
+  padding:13px 27px;
+  border:1px solid #292d27;
+  border-radius:30px;
+  font-size:13px;
+  transition:.3s;
+}
+
+.view-all a:hover{
+  background:#292d27;
+  color:#fff;
+}
+
+@media(max-width:900px){
+  .products-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+  }
+}
+
+@media(max-width:600px){
+
+  .collection{
+    padding:70px 5%;
+  }
+
+  .section-top{
+    display:block;
+    margin-bottom:30px;
+  }
+
+  .section-text{
+    margin-top:15px;
+  }
+
+  .products-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+  }
+
+  .product-img{
+    aspect-ratio:1/1.08;
+  }
+
+  .product-info{
+    padding:13px 11px 14px;
+  }
+
+  .product-name{
+    font-size:16px;
+  }
+
+  .product-desc{
+    font-size:10px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+
+  .price-row{
+    display:block;
+  }
+
+  .price{
+    font-size:13px;
+  }
+
+  .old-price{
+    font-size:10px;
+  }
+
+  .order-btn{
+    display:block;
+    text-align:center;
+    margin-top:10px;
+    width:100%;
+  }
+}
+</style>
+
+
+<section class="collection" id="shop">
+
+  <div class="section-top">
+
+    <div>
+      <div class="section-label">
+        The Happy Thread
+      </div>
+
+      <h2 class="section-title">
+        Made to make<br>you happy.
+      </h2>
+    </div>
+
+    <p class="section-text">
+      Discover our handcrafted collection of
+      versatile, sustainable and beautiful
+      everyday essentials.
+    </p>
+
+  </div>
+
+
+  <div class="category-row">
+
+    <button class="category-btn active">
+      All
+    </button>
+
+    <button class="category-btn">
+      Tote Bags
+    </button>
+
+    <button class="category-btn">
+      Quilted
+    </button>
+
+    <button class="category-btn">
+      Pouches
+    </button>
+
+    <button class="category-btn">
+      New Arrivals
+    </button>
+
+  </div>
+
+
+  <div class="products-grid">
+
+
+    <!-- PRODUCT 1 -->
+
+    <div class="product-card">
+
+      <div class="product-img">
+
+        <span class="product-tag">
+          Bestseller
+        </span>
+
+        <button class="wish">♡</button>
+
+        <img
+          src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=900&q=85"
+          alt="Handcrafted Tote Bag">
+
+      </div>
+
+      <div class="product-info">
+
+        <h3 class="product-name">
+          Tropical Palms Tote
+        </h3>
+
+        <p class="product-desc">
+          Handmade • Premium Cotton
+        </p>
+
+        <div class="price-row">
+
+          <div class="price">
+            ₹900
+            <span class="old-price">₹1,200</span>
+          </div>
+
+          <a
+            class="order-btn"
+            href="https://wa.me/919138020474?text=Hi%20The%20Happy%20Thread%2C%20I%20want%20to%20order%20the%20Tropical%20Palms%20Tote."
+          >
+            WhatsApp
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- PRODUCT 2 -->
+
+    <div class="product-card">
+
+      <div class="product-img">
+
+        <span class="product-tag">
+          New
+        </span>
+
+        <button class="wish">♡</button>
+
+        <img
+          src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=900&q=85"
+          alt="Handcrafted Striped Bag">
+
+      </div>
+
+      <div class="product-info">
+
+        <h3 class="product-name">
+          Striped Marigold
+        </h3>
+
+        <p class="product-desc">
+          Handcrafted • Everyday Tote
+        </p>
+
+        <div class="price-row">
+
+          <div class="price">
+            ₹900
+            <span class="old-price">₹1,200</span>
+          </div>
+
+          <a
+            class="order-btn"
+            href="https://wa.me/919138020474?text=Hi%20The%20Happy%20Thread%2C%20I%20want%20to%20order%20the%20Striped%20Marigold%20bag."
+          >
+            WhatsApp
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- PRODUCT 3 -->
+
+    <div class="product-card">
+
+      <div class="product-img">
+
+        <span class="product-tag">
+          Handmade
+        </span>
+
+        <button class="wish">♡</button>
+
+        <img
+          src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=900&q=85"
+          alt="Blue Handmade Bag">
+
+      </div>
+
+      <div class="product-info">
+
+        <h3 class="product-name">
+          Midnight Pineapple
+        </h3>
+
+        <p class="product-desc">
+          Premium Cotton • Artisan Made
+        </p>
+
+        <div class="price-row">
+
+          <div class="price">
+            ₹900
+            <span class="old-price">₹1,200</span>
+          </div>
+
+          <a
+            class="order-btn"
+            href="https://wa.me/919138020474?text=Hi%20The%20Happy%20Thread%2C%20I%20want%20to%20order%20the%20Midnight%20Pineapple%20bag."
+          >
+            WhatsApp
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- PRODUCT 4 -->
+
+    <div class="product-card">
+
+      <div class="product-img">
+
+        <span class="product-tag">
+          Limited
+        </span>
+
+        <button class="wish">♡</button>
+
+        <img
+          src="https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=900&q=85"
+          alt="Black Pink Handmade Tote">
+
+      </div>
+
+      <div class="product-info">
+
+        <h3 class="product-name">
+          Black Pink Bow
+        </h3>
+
+        <p class="product-desc">
+          Quilted • Handmade with Love
+        </p>
+
+        <div class="price-row">
+
+          <div class="price">
+            ₹900
+            <span class="old-price">₹1,200</span>
+          </div>
+
+          <a
+            class="order-btn"
+            href="https://wa.me/919138020474?text=Hi%20The%20Happy%20Thread%2C%20I%20want%20to%20order%20the%20Black%20Pink%20Bow%20Tote."
+          >
+            WhatsApp
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+  <div class="view-all">
+    <a href="#collections">
+      View Full Collection →
+    </a>
+  </div>
+
+</section>
+<style>
+.story-section{
+  padding:110px 6%;
+  background:#f3f0e7;
+}
+
+.story-wrap{
+  max-width:1250px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:center;
+}
+
+.story-image{
+  position:relative;
+  height:620px;
+  overflow:hidden;
+}
+
+.story-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:.7s ease;
+}
+
+.story-image:hover img{
+  transform:scale(1.04);
+}
+
+.story-badge{
+  position:absolute;
+  right:20px;
+  bottom:20px;
+  width:125px;
+  height:125px;
+  border-radius:50%;
+  background:#fffdf8;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-family:'Playfair Display',serif;
+  font-size:15px;
+  line-height:1.3;
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+.story-content{
+  max-width:520px;
+}
+
+.story-small{
+  font-size:11px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  color:#7d866f;
+  margin-bottom:18px;
+}
+
+.story-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(42px,5vw,66px);
+  line-height:1.03;
+  font-weight:500;
+  margin-bottom:25px;
+}
+
+.story-title em{
+  color:#7d866f;
+  font-style:italic;
+}
+
+.story-text{
+  color:#696d64;
+  font-size:15px;
+  line-height:1.9;
+  margin-bottom:30px;
+}
+
+.story-points{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  margin-bottom:35px;
+}
+
+.story-point{
+  padding-top:15px;
+  border-top:1px solid rgba(37,40,34,.15);
+}
+
+.story-point strong{
+  display:block;
+  font-family:'Playfair Display',serif;
+  font-size:17px;
+  font-weight:500;
+  margin-bottom:5px;
+}
+
+.story-point span{
+  font-size:11px;
+  color:#85887f;
+}
+
+.story-link{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:13px 22px;
+  border:1px solid #292d27;
+  border-radius:30px;
+  font-size:13px;
+  transition:.3s;
+}
+
+.story-link:hover{
+  background:#292d27;
+  color:#fff;
+}
+
+@media(max-width:768px){
+
+  .story-section{
+    padding:75px 5%;
+  }
+
+  .story-wrap{
+    grid-template-columns:1fr;
+    gap:45px;
+  }
+
+  .story-image{
+    height:440px;
+  }
+
+  .story-badge{
+    width:105px;
+    height:105px;
+    right:14px;
+    bottom:14px;
+    font-size:13px;
+  }
+
+  .story-title{
+    font-size:44px;
+  }
+
+  .story-text{
+    font-size:14px;
+    line-height:1.8;
+  }
+
+  .story-points{
+    gap:12px;
+  }
+
+  .story-point strong{
+    font-size:15px;
+  }
+}
+</style>
+
+
+<section class="story-section" id="about">
+
+  <div class="story-wrap">
+
+    <div class="story-image">
+
+      <img
+        src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=1200&q=90"
+        alt="The Happy Thread Handmade Collection">
+
+      <div class="story-badge">
+        Made<br>
+        with<br>
+        ♥
+      </div>
+
+    </div>
+
+
+    <div class="story-content">
+
+      <div class="story-small">
+        Our little story
+      </div>
+
+      <h2 class="story-title">
+        Made by hand,<br>
+        <em>made with heart.</em>
+      </h2>
+
+      <p class="story-text">
+        At The Happy Thread, we believe that the little things
+        in life can bring the biggest smiles. Our collection is
+        thoughtfully handcrafted with beautiful fabrics,
+        creative details and lots of love.
+      </p>
+
+      <div class="story-points">
+
+        <div class="story-point">
+          <strong>Handcrafted</strong>
+          <span>Made carefully by skilled hands.</span>
+        </div>
+
+        <div class="story-point">
+          <strong>Sustainable</strong>
+          <span>Thoughtful choices for everyday living.</span>
+        </div>
+
+        <div class="story-point">
+          <strong>Indian</strong>
+          <span>Inspired by colours and craft of India.</span>
+        </div>
+
+        <div class="story-point">
+          <strong>Made With Love</strong>
+          <span>Every piece has its own little story.</span>
+        </div>
+
+      </div>
+
+      <a href="#collections" class="story-link">
+        Discover Our Collection →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
