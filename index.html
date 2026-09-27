@@ -1192,3 +1192,720 @@ a{
   </div>
 
 </section>
+<style>
+.collections-section{
+  width:100%;
+  padding:100px 6%;
+  background:#fffdf8;
+}
+
+.collections-head{
+  text-align:center;
+  max-width:650px;
+  margin:0 auto 45px;
+}
+
+.collections-label{
+  font-size:11px;
+  letter-spacing:2.5px;
+  color:#7d866f;
+  text-transform:uppercase;
+  margin-bottom:14px;
+}
+
+.collections-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(40px,5vw,62px);
+  line-height:1.05;
+  font-weight:500;
+}
+
+.collections-sub{
+  margin-top:16px;
+  color:#777970;
+  font-size:14px;
+  line-height:1.7;
+}
+
+.collections-grid{
+  max-width:1250px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1.35fr 1fr 1fr;
+  grid-template-rows:270px 270px;
+  gap:15px;
+}
+
+.collection-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:3px;
+  background:#eee9de;
+}
+
+.collection-card.large{
+  grid-row:span 2;
+}
+
+.collection-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:.7s ease;
+}
+
+.collection-card:hover img{
+  transform:scale(1.06);
+}
+
+.collection-overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:flex-end;
+  padding:27px;
+  background:linear-gradient(
+    transparent 40%,
+    rgba(20,23,19,.65)
+  );
+}
+
+.collection-info{
+  color:white;
+}
+
+.collection-info small{
+  font-size:10px;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  opacity:.85;
+}
+
+.collection-info h3{
+  font-family:'Playfair Display',serif;
+  font-size:27px;
+  font-weight:500;
+  margin:5px 0 12px;
+}
+
+.collection-info a{
+  font-size:11px;
+  border-bottom:1px solid rgba(255,255,255,.7);
+  padding-bottom:4px;
+}
+
+.collections-bottom{
+  text-align:center;
+  margin-top:40px;
+}
+
+.collections-bottom a{
+  display:inline-block;
+  padding:14px 28px;
+  border-radius:30px;
+  background:#292d27;
+  color:white;
+  font-size:13px;
+  transition:.3s;
+}
+
+.collections-bottom a:hover{
+  background:#7d866f;
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .collections-section{
+    padding:70px 5%;
+  }
+
+  .collections-head{
+    margin-bottom:30px;
+  }
+
+  .collections-title{
+    font-size:42px;
+  }
+
+  .collections-sub{
+    font-size:13px;
+  }
+
+  .collections-grid{
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:240px 190px 190px;
+    gap:10px;
+  }
+
+  .collection-card.large{
+    grid-column:span 2;
+    grid-row:auto;
+  }
+
+  .collection-card{
+    min-width:0;
+    width:100%;
+  }
+
+  .collection-overlay{
+    padding:16px;
+  }
+
+  .collection-info h3{
+    font-size:21px;
+    margin:4px 0 8px;
+  }
+
+  .collection-info small{
+    font-size:8px;
+  }
+
+  .collection-info a{
+    font-size:9px;
+  }
+
+  .collections-bottom{
+    margin-top:30px;
+  }
+
+}
+
+
+/* SMALL MOBILE */
+
+@media(max-width:380px){
+
+  .collections-section{
+    padding-left:4%;
+    padding-right:4%;
+  }
+
+  .collections-grid{
+    grid-template-rows:220px 170px 170px;
+  }
+
+  .collections-title{
+    font-size:37px;
+  }
+
+}
+</style>
+
+
+<section class="collections-section" id="collections">
+
+  <div class="collections-head">
+
+    <div class="collections-label">
+      Explore The Happy Thread
+    </div>
+
+    <h2 class="collections-title">
+      Find your happy piece.
+    </h2>
+
+    <p class="collections-sub">
+      From everyday totes to thoughtfully crafted
+      accessories — discover something made just for you.
+    </p>
+
+  </div>
+
+
+  <div class="collections-grid">
+
+
+    <!-- LARGE -->
+
+    <div class="collection-card large">
+
+      <img
+        src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=1200&q=90"
+        alt="Everyday Tote Collection">
+
+      <div class="collection-overlay">
+
+        <div class="collection-info">
+
+          <small>Everyday Essentials</small>
+
+          <h3>
+            Everyday Totes
+          </h3>
+
+          <a href="#shop">
+            SHOP COLLECTION →
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- CARD 2 -->
+
+    <div class="collection-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=900&q=85"
+        alt="Quilted Collection">
+
+      <div class="collection-overlay">
+
+        <div class="collection-info">
+
+          <small>Soft & Detailed</small>
+
+          <h3>
+            Quilted
+          </h3>
+
+          <a href="#shop">
+            EXPLORE →
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- CARD 3 -->
+
+    <div class="collection-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=900&q=85"
+        alt="New Arrivals">
+
+      <div class="collection-overlay">
+
+        <div class="collection-info">
+
+          <small>Fresh Picks</small>
+
+          <h3>
+            New Arrivals
+          </h3>
+
+          <a href="#shop">
+            EXPLORE →
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- CARD 4 -->
+
+    <div class="collection-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85"
+        alt="Mini Bags">
+
+      <div class="collection-overlay">
+
+        <div class="collection-info">
+
+          <small>Little Things</small>
+
+          <h3>
+            Mini Bags
+          </h3>
+
+          <a href="#shop">
+            EXPLORE →
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- CARD 5 -->
+
+    <div class="collection-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=900&q=85"
+        alt="Handmade Favourites">
+
+      <div class="collection-overlay">
+
+        <div class="collection-info">
+
+          <small>Made With Love</small>
+
+          <h3>
+            Favourites
+          </h3>
+
+          <a href="#shop">
+            EXPLORE →
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="collections-bottom">
+
+    <a href="#shop">
+      View All Products →
+    </a>
+
+  </div>
+
+</section>
+<style>
+.why-section{
+  width:100%;
+  padding:95px 6%;
+  background:#f3f0e7;
+}
+
+.why-head{
+  text-align:center;
+  max-width:650px;
+  margin:0 auto 55px;
+}
+
+.why-label{
+  font-size:11px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  color:#7d866f;
+  margin-bottom:14px;
+}
+
+.why-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(40px,5vw,60px);
+  line-height:1.05;
+  font-weight:500;
+}
+
+.why-text{
+  margin-top:16px;
+  color:#777970;
+  font-size:14px;
+  line-height:1.7;
+}
+
+.why-grid{
+  max-width:1150px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.why-card{
+  background:#fffdf8;
+  padding:35px 25px;
+  text-align:center;
+  border:1px solid rgba(37,40,34,.07);
+  transition:.35s ease;
+}
+
+.why-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 15px 35px rgba(30,35,25,.08);
+}
+
+.why-icon{
+  width:55px;
+  height:55px;
+  margin:0 auto 20px;
+  border-radius:50%;
+  background:#e9e8dc;
+  display:grid;
+  place-items:center;
+  font-size:22px;
+}
+
+.why-card h3{
+  font-family:'Playfair Display',serif;
+  font-size:20px;
+  font-weight:500;
+  margin-bottom:10px;
+}
+
+.why-card p{
+  color:#80837a;
+  font-size:12px;
+  line-height:1.7;
+}
+
+
+/* WHATSAPP BANNER */
+
+.whatsapp-banner{
+  max-width:1150px;
+  margin:55px auto 0;
+  padding:35px 40px;
+  background:#292d27;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.whatsapp-content small{
+  color:#bfc5b5;
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.whatsapp-content h3{
+  font-family:'Playfair Display',serif;
+  font-size:30px;
+  font-weight:500;
+  margin-top:7px;
+}
+
+.whatsapp-content p{
+  color:#c5c8c0;
+  font-size:12px;
+  margin-top:7px;
+}
+
+.whatsapp-btn{
+  flex-shrink:0;
+  padding:14px 25px;
+  border-radius:30px;
+  background:#fffdf8;
+  color:#292d27;
+  font-size:13px;
+  transition:.3s;
+}
+
+.whatsapp-btn:hover{
+  background:#7d866f;
+  color:#fff;
+}
+
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+  .why-section{
+    padding:70px 5%;
+  }
+
+  .why-grid{
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+
+  .why-card{
+    padding:27px 15px;
+  }
+
+  .why-icon{
+    width:48px;
+    height:48px;
+    font-size:19px;
+  }
+
+  .why-card h3{
+    font-size:17px;
+  }
+
+  .why-card p{
+    font-size:11px;
+  }
+
+  .whatsapp-banner{
+    padding:28px 22px;
+    display:block;
+    text-align:center;
+  }
+
+  .whatsapp-content h3{
+    font-size:26px;
+  }
+
+  .whatsapp-btn{
+    display:inline-block;
+    margin-top:20px;
+  }
+}
+
+@media(max-width:380px){
+
+  .why-section{
+    padding-left:4%;
+    padding-right:4%;
+  }
+
+  .why-grid{
+    gap:8px;
+  }
+
+  .why-card{
+    padding:23px 10px;
+  }
+
+  .why-card h3{
+    font-size:15px;
+  }
+
+}
+</style>
+
+
+<section class="why-section">
+
+  <div class="why-head">
+
+    <div class="why-label">
+      Why The Happy Thread
+    </div>
+
+    <h2 class="why-title">
+      Little details.<br>
+      Big difference.
+    </h2>
+
+    <p class="why-text">
+      Every piece is created with attention to detail,
+      beautiful fabrics and the belief that everyday
+      essentials can still feel special.
+    </p>
+
+  </div>
+
+
+  <div class="why-grid">
+
+
+    <div class="why-card">
+
+      <div class="why-icon">
+        ✦
+      </div>
+
+      <h3>
+        Handmade
+      </h3>
+
+      <p>
+        Carefully crafted with love,
+        patience and attention to detail.
+      </p>
+
+    </div>
+
+
+    <div class="why-card">
+
+      <div class="why-icon">
+        ♡
+      </div>
+
+      <h3>
+        Made With Love
+      </h3>
+
+      <p>
+        Thoughtfully designed pieces
+        made to bring everyday joy.
+      </p>
+
+    </div>
+
+
+    <div class="why-card">
+
+      <div class="why-icon">
+        ✿
+      </div>
+
+      <h3>
+        Unique Designs
+      </h3>
+
+      <p>
+        Beautiful patterns and details
+        you won't find everywhere.
+      </p>
+
+    </div>
+
+
+    <div class="why-card">
+
+      <div class="why-icon">
+        ✓
+      </div>
+
+      <h3>
+        Quality First
+      </h3>
+
+      <p>
+        Premium materials selected
+        for everyday use and comfort.
+      </p>
+
+    </div>
+
+
+  </div>
+
+
+  <div class="whatsapp-banner">
+
+    <div class="whatsapp-content">
+
+      <small>
+        Need help choosing?
+      </small>
+
+      <h3>
+        Let's find your happy piece.
+      </h3>
+
+      <p>
+        Have a question about a product?
+        Chat with us directly on WhatsApp.
+      </p>
+
+    </div>
+
+
+    <a
+      class="whatsapp-btn"
+      href="https://wa.me/919138020474?text=Hi%20The%20Happy%20Thread%2C%20I%20need%20help%20choosing%20a%20product."
+      target="_blank"
+    >
+      Chat on WhatsApp →
+    </a>
+
+  </div>
+
+</section>
